@@ -1,0 +1,84 @@
+<div class="container">
+  <hello name="{{ name }}"></hello>
+  <button class="btn btn-sm btn-info" #fromEventBtn>From event</button>&nbsp;
+  <button class="btn btn-sm btn-info" (click)="startinterval()">
+    Start interval
+  </button>
+  &nbsp;
+  <button class="btn btn-sm btn-info" (click)="ofOperator()">Of Opertor</button>
+  &nbsp;
+  <button class="btn btn-sm btn-info" (click)="fromOperator()">
+    from Operator
+  </button>
+  &nbsp;
+  <button class="btn btn-sm btn-info" (click)="toArrayDemo()">To Array</button>
+  &nbsp;
+  <button class="btn btn-sm btn-info" (click)="mapFilter()">Map demo</button>
+  &nbsp;
+  <button class="btn btn-sm btn-info" (click)="mergeConcatDemo()">
+    Merge and concate</button
+  >&nbsp;
+  <button class="btn btn-sm btn-info" (click)="mergeMapDemo()">MergeAll</button>
+  <div class="row" style="padding-top:1rem">
+    <div class="col-md-4">
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">From event</h5>
+          <ul id="ulList"></ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">Interval</h5>
+          <ul id="ulListInt"></ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">Of Operator</h5>
+          <ul id="ulListIntOf"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br />
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">From Operator</h5>
+          <ul id="ulListFrom"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br />
+  <div class="row">
+    <ul class="list-group">
+      <li class="list-group-item" *ngFor="let ele of elements">{{ ele }}</li>
+    </ul>
+  </div>
+  <br />
+  <div class="row">
+    <div class="col-md-12">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Name</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let ele of dataInNeed">
+            <td>{{ ele.name }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <app-component2></app-component2>
+</div>
